@@ -11,10 +11,12 @@ int cytron_pins[] = {30, 31, 32, 33, 34, 35, 36, 37};
 void init() {
   for (int i = 0; i < 8; i++) {
     pinMode(motor_pins[i], OUTPUT);
+    digitalWrite(motor_pins[i],HIGH);
     pinMode(cytron_pins[i], INPUT);
   }
 }
 
+//Read from Cytron
 void read_cytron() {
   for (int i = 0; i < 8; i++) {
     readings[i] = digitalRead(cytron_pins[i]);
@@ -27,9 +29,6 @@ void setup() {
 }
 
 
-
-
 void loop() {
-  // put your main code here, to run repeatedly:
 
 }
